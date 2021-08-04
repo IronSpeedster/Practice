@@ -8,32 +8,15 @@ body {
 }
 input {
     height: 45px;
-    width: 100%;
     color: #3B5983;
-    font-size: 14px;
     line-height: 16px;
-    border: 2px solid #E9F2FF;
-    border-radius: 5px;
-    padding-left: 25px;
 }
 
 input[type="checkbox"] {
     height: 14px;
     width: 20px;
 }
-input:focus {
-    outline: none;
-    border: 2px solid #C1D9FD;
-}
-input:valid {
-    border-color: #0D6CF2;
-}
-input:invalid {
-    border-color: orange;
-}
-input:not(:focus):invalid {
-    border-color: #78679a;
-}
+
 input:hover {
     cursor: pointer;
 }
@@ -164,3 +147,67 @@ div.checkbox {
     justify-content: center;
     padding-top: 10px;
 }
+
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.form-control label {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.form-control input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-control.success input {
+	border-color: #2ecc71;
+}
+
+.form-control.error input {
+	border-color: #e74c3c;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 40px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
+}
+
